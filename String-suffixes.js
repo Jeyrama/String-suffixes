@@ -22,3 +22,6 @@ Note:
   Each string will have at least one character,
   no need to check for empty strings.
 */
+
+
+// Solution
