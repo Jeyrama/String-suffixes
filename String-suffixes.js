@@ -25,3 +25,13 @@ Note:
 
 
 // Solution
+
+function stringSuffix(s){
+  return s.split('').reduce(function(c, v, i){
+    let t = 1;
+    return c + s.slice(i).split('').reduce(function(c, v, i){
+      if (s[i] != v) t = 0;
+      return c + (t ? +(s[i] == v) : 0);
+    }, 0);
+  }, 0);
+}
