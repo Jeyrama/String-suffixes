@@ -35,3 +35,5 @@ function stringSuffix(s){
     }, 0);
   }, 0);
 }
+
+// or
