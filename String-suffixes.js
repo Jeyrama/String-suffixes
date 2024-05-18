@@ -37,3 +37,16 @@ function stringSuffix(s){
 }
 
 // or
+
+function stringSimilarity(a, b) {
+  if (!a || !b || a[0] != b[0]) return 0;
+  return 1 + stringSimilarity(a.slice(1), b.slice(1));
+}
+
+function stringSuffix(s) {
+  let sum = s.length;
+  for (let i = s.length - 1; i > 0; i--) {
+    sum += stringSimilarity(s, s.slice(i));
+  }
+  return sum;
+}
